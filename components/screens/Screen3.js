@@ -275,7 +275,7 @@ export default function Screen3() {
           paddingHorizontal: 10,
         }}
       >
-        <View style={styles.picker}>
+        <View style={styles.pickerView}>
           <RNPickerSelect
             style={styles.picker}
             placeholder={{
@@ -372,6 +372,8 @@ const styles = StyleSheet.create({
     padding: 5,
     height: height / 2,
     textAlignVertical: 'top',
+    elevation: 5,
+    backgroundColor: '#fff',
   },
   countText: {
     fontSize: 35,
@@ -379,5 +381,10 @@ const styles = StyleSheet.create({
     textShadowRadius: 5,
     textShadowOffset: { width: 1, height: 1 },
   },
-  picker: { width: 50, backgroundColor: '#AEB6FF', borderRadius: 100 },
+  pickerView: {
+    width: 50,
+    backgroundColor: '#AEB6FF',
+    borderRadius: 100,
+    elevation: 10,
+  },
 })
