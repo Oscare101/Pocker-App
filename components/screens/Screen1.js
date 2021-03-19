@@ -3,31 +3,7 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 
 export default function () {
-  const [school11, setSchool11] = useState('')
-  const [school12, setSchool12] = useState('')
-  const [school13, setSchool13] = useState('')
-  const [school14, setSchool14] = useState('')
-  const [school15, setSchool15] = useState('')
-  const [school16, setSchool16] = useState('')
-  const [school21, setSchool21] = useState('')
-  const [school22, setSchool22] = useState('')
-  const [school23, setSchool23] = useState('')
-  const [school24, setSchool24] = useState('')
-  const [school25, setSchool25] = useState('')
-  const [school26, setSchool26] = useState('')
-  const [school31, setSchool31] = useState('')
-  const [school32, setSchool32] = useState('')
-  const [school33, setSchool33] = useState('')
-  const [school34, setSchool34] = useState('')
-  const [school35, setSchool35] = useState('')
-  const [school36, setSchool36] = useState('')
-
-  const [school1, setSchool1] = useState('')
-  const [school2, setSchool2] = useState('')
-  const [school3, setSchool3] = useState('')
-  const [school4, setSchool4] = useState('')
-  const [school5, setSchool5] = useState('')
-  const [school6, setSchool6] = useState('')
+  const [school, setSchool] = useState([])
 
   const ChangeItem = () => {
     if (school11 && school21 && school31) {

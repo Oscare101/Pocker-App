@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff',
   },
   row: { flexDirection: 'row' },
   text: {

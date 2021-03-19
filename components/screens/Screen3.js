@@ -7,7 +7,8 @@ import {
   Dimensions,
   StatusBar,
   TextInput,
-  UselessTextInput,
+  AsyncStorage,
+  Button,
 } from 'react-native'
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
 import { Picker } from '@react-native-picker/picker'
@@ -18,8 +19,9 @@ const height = Dimensions.get('window').height
 
 export default function Screen3() {
   const [diceOutput, setDiceOutput] = useState(null)
-  const [text, onChangeText] = React.useState('')
   const [selectedCount, setSelectedCount] = useState('6')
+  const [value, setValue] = useState('')
+  const [textInput, setTextInput] = useState('')
 
   const Dice1 = () => {
     return (
@@ -258,7 +260,6 @@ export default function Screen3() {
         )
     }
   }
-
   return (
     <View style={styles.view}>
       <StatusBar backgroundColor="#bbb" />
@@ -310,10 +311,18 @@ export default function Screen3() {
       <TextInput
         multiline
         numberOfLines={100}
-        placeholder="Notes..."
         style={styles.text}
-        onChangeText={onChangeText}
-        value={text}
+        onChangeText={(data) => {
+          setTextInput(data)
+
+          // AsyncStorage.setItem('text', textInput)
+          // setTextInput(textInput)
+
+          // AsyncStorage.getItem('11').then((value) => {
+          //   setTextInput(value)
+          // })
+        }}
+        value={textInput}
       />
     </View>
   )
@@ -358,7 +367,7 @@ const styles = StyleSheet.create({
     top: 0,
     borderBottomWidth: 1,
     borderColor: '#666',
-    margin: 10,
+    marginBottom: 10,
     elevation: 5,
     backgroundColor: '#fff',
     height: width / 5,
